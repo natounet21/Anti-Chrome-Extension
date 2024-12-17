@@ -1,0 +1,22 @@
+{
+	"manifest_version": 3,
+	"name": "Anti",
+	"description": "",
+	"version": "1.7",
+	"content_scripts": [
+		{
+			"js": ["background/content.js"],
+			"matches": ["<all_urls>"],
+			"run_at": "document_start"
+		}
+	],
+	"web_accessible_resources": [
+		{
+			"resources": ["warn/warn.html"],
+			"matches": ["<all_urls>"]
+		}
+	],
+	"permissions": [
+		"storage"
+	]
+}
